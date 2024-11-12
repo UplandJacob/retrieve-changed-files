@@ -1121,9 +1121,9 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
 
-"@vercel/ncc@^0.34.0":
-  version "0.34.0"
-  resolved "https://registry.npmjs.org/@vercel/ncc/-/ncc-0.34.0.tgz"
+"@vercel/ncc@^0.38.2":
+  version "0.38.2"
+  resolved "https://registry.yarnpkg.com/@vercel/ncc/-/ncc-0.38.2.tgz#d35c3a74c671699ccf316f74bf0ecab6b60e312b"
 
 acorn-jsx@^5.3.2:
   version "5.3.2"
