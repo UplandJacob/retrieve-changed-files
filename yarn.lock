@@ -1180,7 +1180,7 @@
     semver "^7.6.0"
     ts-api-utils "^1.3.0"
 
-"@typescript-eslint/utils@5.44.0", "@typescript-eslint/utils@^5.10.0":
+"@typescript-eslint/utils@5.44.0":
   version "5.44.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/utils/-/utils-5.44.0.tgz"
   dependencies:
@@ -1193,7 +1193,7 @@
     eslint-utils "^3.0.0"
     semver "^7.3.7"
 
-"@typescript-eslint/utils@8.14.0":
+"@typescript-eslint/utils@8.14.0", "@typescript-eslint/utils@^6.0.0 || ^7.0.0 || ^8.0.0":
   version "8.14.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-8.14.0.tgz#ac2506875e03aba24e602364e43b2dfa45529dbd"
   dependencies:
@@ -2000,11 +2000,11 @@ eslint-plugin-import@^2.25.2:
     resolve "^1.22.0"
     tsconfig-paths "^3.14.1"
 
-eslint-plugin-jest@^27.1.5:
-  version "27.1.5"
-  resolved "https://registry.npmjs.org/eslint-plugin-jest/-/eslint-plugin-jest-27.1.5.tgz"
+eslint-plugin-jest@^28.9.0:
+  version "28.9.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-28.9.0.tgz#19168dfaed124339cd2252c4c4d1ac3688aeb243"
   dependencies:
-    "@typescript-eslint/utils" "^5.10.0"
+    "@typescript-eslint/utils" "^6.0.0 || ^7.0.0 || ^8.0.0"
 
 eslint-plugin-jsx-a11y@^6.7.1:
   version "6.7.1"
