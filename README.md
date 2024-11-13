@@ -2,6 +2,11 @@
   <a href="https://github.com/masesgroup/retrieve-changed-files/actions"><img alt="masesgroup/retrieve-changed-files status" src="https://github.com/masesgroup/retrieve-changed-files/workflows/Test/badge.svg"></a>
 </p>
 
+Forked from [masesgroup/retrieve-changed-files](https://github.com/masesgroup/retrieve-changed-files)
+
+Originally from [jitterbit/get-changed-files](https://github.com/jitterbit/get-changed-files)
+
+
 # Retrieve All Changed Files
 
 Retrieve all of the files changed/modified in a pull request or push's commits.
@@ -14,7 +19,7 @@ The `steps` output context exposes the output names `all`, `added`, `modified`, 
 See [action.yml](action.yml)
 
 ```yaml
-- uses: masesgroup/retrieve-changed-files@v3
+- uses: UplandJacob2/retrieve-changed-files@v4
   with:
     # Format of the steps output context.
     # Can be 'space-delimited', 'csv', or 'json'.
@@ -35,7 +40,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: masesgroup/retrieve-changed-files@v3
+  uses: UplandJacob2/retrieve-changed-files@v4
 - run: |
     for changed_file in ${{ steps.files.outputs.all }}; do
       echo "Do something with this ${changed_file}."
@@ -46,7 +51,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: masesgroup/retrieve-changed-files@v3
+  uses: UplandJacob2/retrieve-changed-files@v4
   with:
     format: 'csv'
 - run: |
@@ -60,7 +65,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: masesgroup/retrieve-changed-files@v3
+  uses: UplandJacob2/retrieve-changed-files@v4
   with:
     format: 'json'
 - run: |
