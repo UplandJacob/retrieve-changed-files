@@ -19,7 +19,7 @@ The `steps` output context exposes the output names `all`, `added`, `modified`, 
 See [action.yml](action.yml)
 
 ```yaml
-- uses: UplandJacob2/retrieve-changed-files@v4
+- uses: UplandJacob/retrieve-changed-files@v4
   with:
     # Format of the steps output context.
     # Can be 'space-delimited', 'csv', or 'json'.
@@ -40,7 +40,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: UplandJacob2/retrieve-changed-files@v4
+  uses: UplandJacob/retrieve-changed-files@v4
 - run: |
     for changed_file in ${{ steps.files.outputs.all }}; do
       echo "Do something with this ${changed_file}."
@@ -51,7 +51,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: UplandJacob2/retrieve-changed-files@v4
+  uses: UplandJacob/retrieve-changed-files@v4
   with:
     format: 'csv'
 - run: |
@@ -65,7 +65,7 @@ Consider using one of the other formats if that's the case.
 
 ```yaml
 - id: files
-  uses: UplandJacob2/retrieve-changed-files@v4
+  uses: UplandJacob/retrieve-changed-files@v4
   with:
     format: 'json'
 - run: |
