@@ -6,6 +6,7 @@ Forked from [masesgroup/retrieve-changed-files](https://github.com/masesgroup/re
 
 Originally from [jitterbit/get-changed-files](https://github.com/jitterbit/get-changed-files)
 
+This repo is kept up to date to prevent deprecation warnings in actions.
 
 # Retrieve All Changed Files
 
