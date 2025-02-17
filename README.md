@@ -28,13 +28,21 @@ See [action.yml](action.yml)
     format: ''
 ```
 
-# Scenarios
+## Permissions
+This action uses the [Github Compare API](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#compare-two-commits), which requires at leaset the following permission:
+
+```yaml
+permissions:
+  contents: read
+```
+
+## Scenarios
 
 - [Retrieve all changed files as space-delimited](#retrieve-all-changed-files-as-space-delimited)
 - [Retrieve all added and modified files as CSV](#retrieve-all-added-and-modified-files-as-csv)
 - [Retrieve all removed files as JSON](#retrieve-all-removed-files-as-json)
 
-## Retrieve all changed files as space-delimited
+### Retrieve all changed files as space-delimited
 
 If there are any files with spaces in them, then this method won't work and the step will fail.
 Consider using one of the other formats if that's the case.
@@ -48,7 +56,7 @@ Consider using one of the other formats if that's the case.
     done
 ```
 
-## Retrieve all added and modified files as CSV
+### Retrieve all added and modified files as CSV
 
 ```yaml
 - id: files
@@ -62,7 +70,7 @@ Consider using one of the other formats if that's the case.
     done
 ```
 
-## Retrieve all removed files as JSON
+### Retrieve all removed files as JSON
 
 ```yaml
 - id: files
