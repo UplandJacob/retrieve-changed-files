@@ -17,7 +17,7 @@ The `steps` output context exposes the output names `all`, `added`, `modified`, 
 
 # Usage
 
-See [action.yml](action.yml)
+See [action.yml](action.yml) for all options and outputs.
 
 ```yaml
 - uses: UplandJacob/retrieve-changed-files@v4
