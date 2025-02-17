@@ -43,7 +43,7 @@
     "@actions/github": "^6.0.0"
   },
   "devDependencies": {
-    "@octokit/rest": "^21.1.0",
+    "@octokit/rest": "^21.1.1",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.13.4",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
