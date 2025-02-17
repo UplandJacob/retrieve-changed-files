@@ -890,20 +890,14 @@
     "@octokit/types" "^13.8.0"
 
 "@octokit/request-error@^5.0.0":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-5.0.1.tgz#277e3ce3b540b41525e07ba24c5ef5e868a72db9"
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-5.1.1.tgz#b9218f9c1166e68bb4d0c89b638edc62c9334805"
   dependencies:
-    "@octokit/types" "^12.0.0"
+    "@octokit/types" "^13.1.0"
     deprecation "^2.0.0"
     once "^1.4.0"
 
-"@octokit/request-error@^6.0.1":
-  version "6.1.5"
-  resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-6.1.5.tgz#907099e341c4e6179db623a0328d678024f54653"
-  dependencies:
-    "@octokit/types" "^13.0.0"
-
-"@octokit/request-error@^6.1.7":
+"@octokit/request-error@^6.0.1", "@octokit/request-error@^6.1.7":
   version "6.1.7"
   resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-6.1.7.tgz#44fc598f5cdf4593e0e58b5155fe2e77230ff6da"
   dependencies:
@@ -960,7 +954,7 @@
   dependencies:
     "@octokit/openapi-types" "^22.2.0"
 
-"@octokit/types@^13.6.2", "@octokit/types@^13.7.0", "@octokit/types@^13.8.0":
+"@octokit/types@^13.1.0", "@octokit/types@^13.6.2", "@octokit/types@^13.7.0", "@octokit/types@^13.8.0":
   version "13.8.0"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-13.8.0.tgz#3815885e5abd16ed9ffeea3dced31d37ce3f8a0a"
   dependencies:
