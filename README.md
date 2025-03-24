@@ -29,7 +29,7 @@ See [action.yml](action.yml) for all options and outputs.
 ```
 
 ## Permissions
-This action uses the [Github Compare API](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#compare-two-commits), which requires at leaset the following permission:
+This action uses the [Github Compare API](https://docs.github.com/en/rest/commits/commits?apiVersion=2022-11-28#compare-two-commits), which requires at least the following permission:
 
 ```yaml
 permissions:
