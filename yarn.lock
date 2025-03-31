@@ -2190,9 +2190,9 @@ eslint-plugin-no-only-tests@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/eslint-plugin-no-only-tests/-/eslint-plugin-no-only-tests-3.1.0.tgz"
 
-eslint-plugin-prettier@^5.2.1, eslint-plugin-prettier@^5.2.4:
-  version "5.2.4"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.4.tgz#6daa54a11da8c48971475d7c0e239d0b6c6dbc60"
+eslint-plugin-prettier@^5.2.1, eslint-plugin-prettier@^5.2.5:
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.5.tgz#0ff00b16f4c80ccdafd6a24a263effba1700087e"
   dependencies:
     prettier-linter-helpers "^1.0.0"
     synckit "^0.10.2"
