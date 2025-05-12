@@ -19,14 +19,17 @@
   dependencies:
     "@actions/io" "^1.0.1"
 
-"@actions/github@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@actions/github/-/github-6.0.0.tgz#65883433f9d81521b782a64cc1fd45eef2191ea7"
+"@actions/github@^6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@actions/github/-/github-6.0.1.tgz#76e5f96df062c90635a7181ef45ff1c4ac21306e"
   dependencies:
     "@actions/http-client" "^2.2.0"
     "@octokit/core" "^5.0.1"
-    "@octokit/plugin-paginate-rest" "^9.0.0"
-    "@octokit/plugin-rest-endpoint-methods" "^10.0.0"
+    "@octokit/plugin-paginate-rest" "^9.2.2"
+    "@octokit/plugin-rest-endpoint-methods" "^10.4.0"
+    "@octokit/request" "^8.4.1"
+    "@octokit/request-error" "^5.1.1"
+    undici "^5.28.5"
 
 "@actions/http-client@^2.0.1", "@actions/http-client@^2.2.0":
   version "2.2.0"
@@ -859,7 +862,7 @@
   dependencies:
     "@octokit/types" "^13.7.0"
 
-"@octokit/plugin-paginate-rest@^9.0.0":
+"@octokit/plugin-paginate-rest@^9.2.2":
   version "9.2.2"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-9.2.2.tgz#c516bc498736bcdaa9095b9a1d10d9d0501ae831"
   dependencies:
@@ -869,11 +872,11 @@
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-request-log/-/plugin-request-log-5.3.1.tgz#ccb75d9705de769b2aa82bcd105cc96eb0c00f69"
 
-"@octokit/plugin-rest-endpoint-methods@^10.0.0":
-  version "10.1.2"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-10.1.2.tgz#bf503f47881171bc9380d110793d8d3150158ed3"
+"@octokit/plugin-rest-endpoint-methods@^10.4.0":
+  version "10.4.1"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-10.4.1.tgz#41ba478a558b9f554793075b2e20cd2ef973be17"
   dependencies:
-    "@octokit/types" "^12.1.1"
+    "@octokit/types" "^12.6.0"
 
 "@octokit/plugin-rest-endpoint-methods@^13.3.0":
   version "13.3.1"
@@ -895,7 +898,7 @@
   dependencies:
     "@octokit/types" "^13.6.2"
 
-"@octokit/request@^8.0.1", "@octokit/request@^8.0.2":
+"@octokit/request@^8.0.1", "@octokit/request@^8.0.2", "@octokit/request@^8.4.1":
   version "8.4.1"
   resolved "https://registry.yarnpkg.com/@octokit/request/-/request-8.4.1.tgz#715a015ccf993087977ea4365c44791fc4572486"
   dependencies:
@@ -923,7 +926,7 @@
     "@octokit/plugin-request-log" "^5.3.1"
     "@octokit/plugin-rest-endpoint-methods" "^13.3.0"
 
-"@octokit/types@^12.0.0", "@octokit/types@^12.1.1":
+"@octokit/types@^12.0.0":
   version "12.1.1"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-12.1.1.tgz#376726d8435625b3a1b6fcd8cd3e1b03ade939dc"
   dependencies:
@@ -4767,9 +4770,9 @@ undici-types@~6.21.0:
   version "6.21.0"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
 
-undici@^5.25.4:
-  version "5.28.5"
-  resolved "https://registry.yarnpkg.com/undici/-/undici-5.28.5.tgz#b2b94b6bf8f1d919bc5a6f31f2c01deb02e54d4b"
+undici@^5.25.4, undici@^5.28.5:
+  version "5.29.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-5.29.0.tgz#419595449ae3f2cdcba3580a2e8903399bd1f5a3"
   dependencies:
     "@fastify/busboy" "^2.0.0"
 
