@@ -6,12 +6,12 @@
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
 
-"@actions/core@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@actions/core/-/core-2.0.1.tgz#fc4961acb04f6253bcdf83ad356e013ba29fc218"
+"@actions/core@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@actions/core/-/core-2.0.2.tgz#81c59e1f3437660d2148a064c1ba8e99931f2cf7"
   dependencies:
     "@actions/exec" "^2.0.0"
-    "@actions/http-client" "^3.0.0"
+    "@actions/http-client" "^3.0.1"
 
 "@actions/exec@^2.0.0":
   version "2.0.0"
@@ -31,7 +31,7 @@
     "@octokit/request-error" "^5.1.1"
     undici "^5.28.5"
 
-"@actions/http-client@^3.0.0", "@actions/http-client@^3.0.1":
+"@actions/http-client@^3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@actions/http-client/-/http-client-3.0.1.tgz#0ac91c3abf179a401e23d40abf0d7caa92324268"
   dependencies:
