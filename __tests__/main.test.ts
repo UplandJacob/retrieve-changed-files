@@ -4,7 +4,7 @@
 // import * as path from 'path'
 
 test('todo: add tests', () => {
-  expect(true).toBeTruthy()
+	expect(true).toBeTruthy()
 })
 
 // test('throws invalid number', async () => {
