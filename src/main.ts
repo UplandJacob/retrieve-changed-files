@@ -1,6 +1,5 @@
 import * as core from '@actions/core'
-import {getOctokit} from '@actions/github'
-import {context} from '@actions/github'
+import {context, getOctokit} from '@actions/github'
 
 type Format = 'space-delimited' | 'csv' | 'json'
 type FileStatus = 'added' | 'modified' | 'removed' | 'renamed'
@@ -8,8 +7,8 @@ type FileStatus = 'added' | 'modified' | 'removed' | 'renamed'
 async function run(): Promise<void> {
   try {
     // Create GitHub client with the API token.
-    const client = getOctokit(core.getInput('token', {required: true}))
-    const format = core.getInput('format', {required: true}) as Format
+    const client = getOctokit(core.getInput('token', {required: true})),
+      format = core.getInput('format', {required: true}) as Format
 
     // Ensure that the format parameter is set properly.
     if (format !== 'space-delimited' && format !== 'csv' && format !== 'json') {
@@ -20,23 +19,23 @@ async function run(): Promise<void> {
     core.debug(`Payload keys: ${Object.keys(context.payload)}`)
 
     // Get event name.
-    const eventName = context.eventName
+    const {eventName} = context
 
     // Define the base and head commits to be extracted from the payload.
-    let base: string | undefined
-    let head: string | undefined
-    let basehead: string | undefined
+    let base: string | undefined,
+      head: string | undefined,
+      basehead: string | undefined
 
     switch (eventName) {
       case 'pull_request':
         base = context.payload.pull_request?.base?.sha
         head = context.payload.pull_request?.head?.sha
-        basehead = base + '...' + head
+        basehead = `${base}...${head}`
         break
       case 'push':
         base = context.payload.before
         head = context.payload.after
-        basehead = base + '...' + head
+        basehead = `${base}...${head}`
         break
       default:
         core.setFailed(
@@ -60,20 +59,21 @@ async function run(): Promise<void> {
       base = ''
       head = ''
     }
-
-    // Use GitHub's compare two commits API.
-    // https://developer.github.com/v3/repos/commits/#compare-two-commits
-    //    const response = await client.repo.compareCommits({
-    //      base,
-    //      head,
-    //      owner: context.repo.owner,
-    //      repo: context.repo.repo
-    //    })
+    /* 
+      Use GitHub's compare two commits API.
+      https://developer.github.com/v3/repos/commits/#compare-two-commits
+        const response = await client.repo.compareCommits({
+          base,
+          head,
+          owner: context.repo.owner,
+          repo: context.repo.repo
+        })
+    */
 
     const response = await client.request('GET /repos/{owner}/{repo}/compare/{basehead}{?page,per_page}', {
       owner: context.repo.owner,
       repo: context.repo.repo,
-      basehead: basehead
+      basehead
     })
 
     // Ensure that the request was successful.
@@ -93,17 +93,16 @@ async function run(): Promise<void> {
     }
 
     // Get the changed files from the response payload.
-    const files = response.data.files
-    const all = [] as string[],
+    const {files} = response.data,
+      all = [] as string[],
       added = [] as string[],
       modified = [] as string[],
       removed = [] as string[],
       renamed = [] as string[],
       addedModified = [] as string[]
     for (const file of files) {
-      const filename = file.filename
-      // If we're using the 'space-delimited' format and any of the filenames have a space in them,
-      // then fail the step.
+      const {filename} = file
+      // If we're using the 'space-delimited' format and any of the filenames have a space in them, then fail the step.
       if (format === 'space-delimited' && filename.includes(' ')) {
         core.setFailed(
           `One of your files includes a space. Consider using a different output format or removing spaces from your filenames. ` +
@@ -144,10 +143,11 @@ async function run(): Promise<void> {
       case 'space-delimited':
         // If any of the filenames have a space in them, then fail the step.
         for (const file of all) {
-          if (file.includes(' '))
+          if (file.includes(' ')) {
             core.setFailed(
               `One of your files includes a space. Consider using a different output format or removing spaces from your filenames.`
             )
+          }
         }
         allFormatted = all.join(' ')
         addedFormatted = added.join(' ')
@@ -172,6 +172,7 @@ async function run(): Promise<void> {
         renamedFormatted = JSON.stringify(renamed)
         addedModifiedFormatted = JSON.stringify(addedModified)
         break
+      // No default
     }
 
     // Log the output values.
@@ -193,8 +194,8 @@ async function run(): Promise<void> {
     // For backwards-compatibility
     core.setOutput('deleted', removedFormatted)
   } catch (error) {
-    let message = 'Unknown Error: unable to get error mesage'
-    if (error instanceof Error) message = error.message
+    let message = 'Unknown Error: unable to get error message'
+    if (error instanceof Error) ({message} = error)
     core.setFailed(message)
   }
 }

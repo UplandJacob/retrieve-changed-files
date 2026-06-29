@@ -30,7 +30,7 @@
 	},
 	"scripts": {
 		"build": "tsc",
-		"clean": "rimraf dist/**/* lib/**/*",
+		"clean": "rimraf --glob dist/**/* lib/**/*",
 		"format": "prettier --write **/*.ts",
 		"format-check": "prettier --check \"{,!(node_modules)/**/}*.ts\"",
 		"lint": "eslint src/**/*.ts",
