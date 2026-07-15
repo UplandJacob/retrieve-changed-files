@@ -353,12 +353,12 @@
   resolved "https://registry.npmjs.org/@eslint-community/regexpp/-/regexpp-4.12.2.tgz"
   integrity sha512-EriSTlt5OC9/7SXkRSCAhfSxxoSUgBm33OH+IkwbdpgoqsSsUg7y3uh+IICI/Qg4BBWr3U2i39RpmycbxMq4ew==
 
-"@eslint/compat@^1.2.3":
-  version "1.4.1"
-  resolved "https://registry.npmjs.org/@eslint/compat/-/compat-1.4.1.tgz"
-  integrity sha512-cfO82V9zxxGBxcQDr1lfaYB7wykTa0b00mGa36FrJl7iTFd0Z2cHfEYuxcBRP/iNijCsWsEkA+jzT8hGYmv33w==
+"@eslint/compat@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@eslint/compat/-/compat-2.1.0.tgz#8c66110f95cf0fdd864b76ae4d534042dea7bb7f"
+  integrity sha512-LgaSCymEpw7tF53xvDw9SNsraPb1IBHxpdABIOM0hW8UAlP8znrjYtuxfR58FSJ3L9BhwD+FaPRFQpZq84Nh6g==
   dependencies:
-    "@eslint/core" "^0.17.0"
+    "@eslint/core" "^1.2.1"
 
 "@eslint/config-array@^0.21.2":
   version "0.21.2"
@@ -380,6 +380,13 @@
   version "0.17.0"
   resolved "https://registry.npmjs.org/@eslint/core/-/core-0.17.0.tgz"
   integrity sha512-yL/sLrpmtDaFEiUj1osRP4TI2MDz1AddJL+jZ7KSqvBuliN4xqYY54IfdN8qD8Toa6g1iloph1fxQNkjOxrrpQ==
+  dependencies:
+    "@types/json-schema" "^7.0.15"
+
+"@eslint/core@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@eslint/core/-/core-1.2.1.tgz#c1da7cd1b82fa8787f98b5629fb811848a1b63ce"
+  integrity sha512-MwcE1P+AZ4C6DWlpin/OmOA54mmIZ/+xZuJiQd4SyB29oAJjN30UW9wkKNptW2ctp4cEsvhlLY/CsQ1uoHDloQ==
   dependencies:
     "@types/json-schema" "^7.0.15"
 
@@ -1999,12 +2006,12 @@ eslint-plugin-filenames@^1.3.2:
     lodash.snakecase "4.1.1"
     lodash.upperfirst "4.3.1"
 
-eslint-plugin-github@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-github/-/eslint-plugin-github-6.0.0.tgz"
-  integrity sha512-J8MvUoiR/TU/Y9NnEmg1AnbvMUj9R6IO260z47zymMLLvso7B4c80IKjd8diqmqtSmeXXlbIus4i0SvK84flag==
+eslint-plugin-github@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-github/-/eslint-plugin-github-6.1.1.tgz#c0aa72c06d1e4bfe0edbfc3324781cc1e97760ad"
+  integrity sha512-xCqu1S/s/CCvoRLafaXNvwiVrxhroNOFLGyG9Dhi4i1PWZgPHlipjXysH6wccPFQyhSKE7gAjSLqdSdM204bZQ==
   dependencies:
-    "@eslint/compat" "^1.2.3"
+    "@eslint/compat" "^2.0.0"
     "@eslint/eslintrc" "^3.1.0"
     "@eslint/js" "^9.14.0"
     "@github/browserslist-config" "^1.0.0"
@@ -2021,11 +2028,11 @@ eslint-plugin-github@^6.0.0:
     eslint-plugin-no-only-tests "^3.0.0"
     eslint-plugin-prettier "^5.2.1"
     eslint-rule-documentation ">=1.0.0"
-    globals "^16.0.0"
+    globals "^17.7.0"
     jsx-ast-utils "^3.3.2"
     prettier "^3.0.0"
     svg-element-attributes "^1.3.1"
-    typescript "^5.7.3"
+    typescript "^6.0.3"
     typescript-eslint "^8.14.0"
 
 eslint-plugin-i18n-text@^1.0.1:
@@ -2458,10 +2465,10 @@ globals@^14.0.0:
   resolved "https://registry.npmjs.org/globals/-/globals-14.0.0.tgz"
   integrity sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==
 
-globals@^16.0.0:
-  version "16.5.0"
-  resolved "https://registry.npmjs.org/globals/-/globals-16.5.0.tgz"
-  integrity sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==
+globals@^17.7.0:
+  version "17.7.0"
+  resolved "https://registry.yarnpkg.com/globals/-/globals-17.7.0.tgz#553d55090b4dde8209ec2da42580d6e7e7d8b10d"
+  integrity sha512-Czmyns5dUsq4seFBR/Kdydhmo8y9kC79hiSkPn0YcGtNnYWnrgt0vjrSjx9tspoDGWm2CMarffRuLjM4xUz8xg==
 
 globalthis@^1.0.4:
   version "1.0.4"
@@ -4305,11 +4312,6 @@ typescript-eslint@^8.14.0:
     "@typescript-eslint/parser" "8.62.0"
     "@typescript-eslint/typescript-estree" "8.62.0"
     "@typescript-eslint/utils" "8.62.0"
-
-typescript@^5.7.3:
-  version "5.9.3"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz"
-  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 typescript@^6.0.3:
   version "6.0.3"
